@@ -1,0 +1,336 @@
+body {
+	font-family: "Arial", Helvetica, sans-serif;
+	background: $white;
+}
+
+a:hover, a:active, a:visited {
+	text-decoration: underline;
+	color: $dark_blue;
+}
+
+//header
+
+header#header {
+	background: url("../../assets/img/bg_header.jpg") repeat-x;
+	padding: 30px 0;
+	@media only screen and (min-width: 768px){
+		padding-top: 50px;
+		padding-bottom: 0;
+		height: 900px;
+	}
+	border-bottom: 5px solid $light_blue;
+
+	h1 {
+		color: $white;
+		padding: 30px 0;
+		@media only screen and (min-width: 768px){
+			padding: 240px 170px 0;
+			font-size: 50px;
+		}
+
+	}
+
+	a.more {
+		font-size: 24px;
+		color: $white;
+		display: block;
+		margin: 50px 20px;
+		@media only screen and (min-width: 768px){
+			margin: 70px 40px;
+		}
+	}
+
+	nav {
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			text-align: right;
+			margin-top: 25px;
+
+			li {
+				display: inline-block;
+				margin-right: 50px;
+
+
+				a {
+					font-size: 18px;
+					color: $white;
+
+					&:hover {
+						color: $dark_blue;
+						text-decoration: none;
+					}
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	a.menuMobile {
+		i {
+			font-size: 30px;
+			padding-top: 15px;
+			color: $white;
+		}
+	}
+
+	img.logo {
+		float: right;
+		@media only screen and (min-width: 768px){
+			clear: right;
+		}
+	}
+
+}
+
+//services
+section.services {
+	padding: 30px 0;
+	@media only screen and (min-width: 768px){
+		padding: 170px 0;
+	}
+
+	h2 {
+		font-size: 22px;
+		text-transform: capitalize;; // i used this rule to apply all the h2 insted to apply it directly on the H2 tag using bootstrap class
+
+		// #################################################
+		// ## if you prefer images you can use this rules ##
+		// ################################################
+		// &::before{
+		// 	padding-right: 10px;
+		// }
+		//
+		// &.command::before {
+		// 	content: url("../../assets/img/command.png");
+		// }
+		//
+		// &.talk::before {
+		// 	content: url("../../assets/img/talk.png");
+		// }
+		//
+		// &.creative::before {
+		// 	content: url("../../assets/img/heart.png");
+		// }
+	}
+
+	p {
+		color: $black;
+		opacity: 0.4;
+	}
+}
+
+//featured work
+section.featured_work {
+	background: $blu1;
+
+	h2 {
+		color: $white;
+		margin:0;
+		padding: 50px 0 40px;
+	}
+
+	.carousel {
+		.item {
+			img {
+				margin: 0 auto;
+			}
+
+			.carousel-caption {
+				position: relative;
+				left: auto;
+				right: auto;
+				text-shadow: none;
+			}
+		}
+
+		//controls
+		.carousel-control.left, .carousel-control.right {
+			background: none;
+		}
+	}
+}
+
+//tabs
+section.tabs {
+	background: $dark_blue;
+	padding: 30px 0;
+
+	@media screen and (min-width: 768px){
+		max-height: 600px;
+		padding: 90px 0;
+	}
+
+
+	p {
+		color: $white;
+		margin: 15px 0;
+		text-align: justify;
+	}
+
+	ul.nav-tabs {
+		margin: 15px 0;
+		border-bottom: 0;
+		text-align: center;
+		width: 100%;
+
+		li {
+			display:inline-block;
+			*display:inline; /*IE7*/
+			*zoom:1; /*IE7*/
+			color:white;
+			margin-right:10px;
+			float: none;
+			&:hover {
+				color: $dark_blue
+			}
+		}
+
+		li > a {
+			color: $white;
+		}
+	}
+
+	.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+		background: none;
+		color: $white;
+		border-bottom-color: inherit;
+	}
+
+	.nav-tabs > li > a {
+		border-radius: 5px;
+	}
+}
+
+//contacts
+section.contacts {
+	margin: 30px 0;
+	@media only screen and (min-width: 768px){
+		margin: 50px 90px;
+	}
+
+	a.social_ico {
+		i {
+			color: $light_grey2;
+			font-size: 22px;
+			margin-right: 18px;
+		}
+		&:hover {
+			i.fa-twitter {
+				color: $light_blue;
+			}
+			i.fa-facebook-official {
+				color: $dark_blue;
+			}
+			i.fa-behance {
+				color: $behance;
+			}
+			i.fa-google-plus {
+				color: $google;
+			}
+			i.fa-dribbble {
+				color: $dribble;
+			}
+		}
+	}
+
+	form {
+		input {
+			border: 0;
+			border-bottom: 1px solid #e2e2e2;
+			border-radius: 0;
+			box-shadow: none;
+			-web-kit-box-shadow: none;
+			padding-left: 0;
+		}
+		input[type="submit"]{
+			border: 0;
+			background: none;
+			color: $dark_blue;
+			width:70%;
+			height: auto;
+			font-size: 16px;
+			padding: 0;
+		}
+		i.fa-envelope {
+			color: $dark_blue;
+			font-size: 22px;
+			float: left;
+		}
+
+	}
+}
+
+//map
+section.map #map {
+		height: 240px;
+		border-bottom: 5px solid $dark_blue!important;
+}
+
+//footer
+footer#footer {
+	padding: 30px 0;
+	@media screen and (min-width: 768px){
+		padding: 60px 0;
+	}
+
+	span {
+		color: $light_blue;
+	}
+
+	p {
+		font-size: 13px;
+		color: $light_grey;
+	}
+	p.credits {
+		text-align: center;
+		@media screen and (min-width: 768px){
+			text-align: right;
+		}
+	}
+	p.copy {
+		text-align: center;
+		@media screen and (min-width: 768px){
+			text-align: left;
+		}
+	}
+
+	.social_container {
+		margin:15px 0;
+
+		a.social_ico {
+			i {
+				color: $light_grey2;
+				font-size: 22px;
+				margin-right: 18px;
+			}
+			&:hover {
+				i.fa-twitter {
+					color: $light_blue;
+				}
+				i.fa-facebook-official {
+					color: $dark_blue;
+				}
+				i.fa-behance {
+					color: $behance;
+				}
+				i.fa-google-plus {
+					color: $google;
+				}
+				i.fa-dribbble {
+					color: $dribble;
+				}
+			}
+		}
+	}
+}
+
+
+//generic
+#menuMobile:not( .mm-menu ) {
+   display: none;
+}
